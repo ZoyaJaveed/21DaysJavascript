@@ -1,0 +1,9 @@
+
+const registerToVote = (name, unregisteredVoters) => {
+  // Code here!
+  var  unregisteredVotersNames = unregisteredVoters.filter(function(value){
+    return value !== name;
+  });
+  // Remember to return a value!
+  return unregisteredVotersNames;
+}
