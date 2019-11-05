@@ -1,0 +1,13 @@
+const chooseStations = (stations) => {
+  // Code here!
+  let appropriateStations=[];
+  for(i=0;i<stations.length;i++){
+    if(stations[i][1]>=20) {
+      if(stations[i][2]=="school" || stations[i][2]=="community centre"){
+         appropriateStations.push(stations[i][0]);
+      }
+    }
+  }
+  // Remember to return a value!
+return appropriateStations;
+}
