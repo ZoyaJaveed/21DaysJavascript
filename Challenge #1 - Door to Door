@@ -1,0 +1,18 @@
+
+  const doorToDoor = (volunteers, neighbourhoods) => {
+    // Code here!
+    var noOfVolunteers = volunteers.length;
+    var noOfNeighbourhoods = neighbourhoods.length;
+    
+    var reminder = noOfNeighbourhoods % noOfVolunteers;
+    if (reminder === 0 ){
+     return  noOfNeighbourhoods / noOfVolunteers;
+    }
+    else{
+      console.log("Work of going door to door cannot be split evenly amongst them");
+    }
+    // Remember to return a value
+
+    // Want to see what's going on inside your function? You can use console.log() to debug and print variables to the console below.
+
+  }
