@@ -1,0 +1,21 @@
+const voterTurnout = (voter_signatures, voter_ids) => {
+  // Code here!
+  if(voter_signatures.length === voter_ids.length){
+    for(i=0;i<voter_ids.length;i++){
+      if(voter_signatures[i] === voter_ids[i]){
+        continue;
+      }else{
+        break;
+      }
+    }
+      if(i === voter_ids.length){
+         return "All clear, we can count the votes!";
+      }else{
+        return "FRAUD!";
+      }
+   
+  }else{
+    return false;
+  }
+  
+}
