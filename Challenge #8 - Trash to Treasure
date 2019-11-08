@@ -1,0 +1,8 @@
+const smartGarbage = (trash, bins) => {
+    // Code here!
+    var trashCount = ++bins[trash];
+    bins[trash]=trashCount;
+    
+    return bins;
+   
+}
