@@ -1,0 +1,22 @@
+const termTopics = (interviews) => {
+  // Code here!
+  var dump=0,smartcity=0,artsfunding=0,transportation=0;
+  var termTopicsCount = [];
+  for(i=0;i<interviews.length;i++){
+    if(interviews[i] === 'smart city'){
+      smartcity++;
+    }else if(interviews[i] === 'arts funding'){
+      artsfunding++;
+    }else if(interviews[i] === 'transportation'){
+      transportation++;
+    }else{
+      dump++;
+    }
+  }
+  termTopicsCount.push(smartcity);
+  termTopicsCount.push(artsfunding);
+  termTopicsCount.push(transportation);
+  
+  return termTopicsCount;
+  // Remember to return an array!
+}
