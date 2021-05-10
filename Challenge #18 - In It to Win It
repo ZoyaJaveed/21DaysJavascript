@@ -1,0 +1,47 @@
+
+const countTickets = (tickets) => {
+  // Code here!
+  var count = {}, red = 0, green = 0, blue = 0;
+  
+  for(i = 0; i< tickets.length; i++){
+    switch(tickets[i]){
+      case 'red': ++ red;
+                  break;
+      case 'green': ++green;
+                  break;
+      case 'blue': ++blue;
+                  break;
+    }
+  }
+  
+  count.red = red;
+  count.green = green;
+  count.blue = blue;
+  
+  return count;
+};
+
+const bestOdds = (tickets, raffleEntries) => {
+  // Code here!
+  var countTicket = countTickets(tickets);
+  var redCount = countTicket.red;
+  var greenCount = countTicket.green;
+  var blueCount = countTicket.blue;
+  
+  var redRaffle = raffleEntries.red;
+  var greenRaffle = raffleEntries.green;
+  var blueRaffle = raffleEntries.blue;
+  
+  var redOdd = redCount/redRaffle;
+  var greenOdd = greenCount/greenRaffle;
+  var blueOdd = blueCount/blueRaffle;
+  
+  if(redOdd > greenOdd && redOdd > blueOdd){
+    return 'You have the best odds of winning the red raffle.';
+  }else if(greenOdd > redOdd && greenOdd > blueOdd){
+    return 'You have the best odds of winning the green raffle.';
+  }else if(blueOdd > redOdd && blueOdd > greenOdd){
+    return 'You have the best odds of winning the blue raffle.';
+  }
+  
+};
