@@ -1,0 +1,20 @@
+const whereCanIPark = (spots, vehicle) => {
+  // Code here!
+  
+  for(r=0;r<spots.length;r++){
+    for(c=0;c<spots[r].length;c++){
+      const spot = spots[r][c];
+      
+      if(vehicle === 'regular' && spot === 'R'){
+        return [c,r];
+      }else if (vehicle === 'small' && (spot === 'R' || spot === 'S')){
+        return [c,r];
+      }else if(vehicle === 'motorcycle' && (spot === 'R' || spot === 'S' || spot === 'M')){
+        return [c,r];
+      }
+    }
+    
+  }
+ return false;
+  
+ };
