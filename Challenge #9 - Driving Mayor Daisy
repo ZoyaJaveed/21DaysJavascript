@@ -1,0 +1,10 @@
+const carPassing = (cars, speed) => {
+  // Code here!
+  var carAdded = {
+    time: Date.now(),
+    speed: speed,
+  }
+  cars.push(carAdded);
+  
+  return cars;
+}
