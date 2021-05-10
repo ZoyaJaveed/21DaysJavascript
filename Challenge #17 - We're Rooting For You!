@@ -1,0 +1,18 @@
+
+const judgeVegetable = (vegetables, metric) => {
+  // Code here!
+   var highestIndex = 0;
+   var highestValue = 0;
+   var submitter ;
+   
+   for(i = 0 ; i< vegetables.length ; i++){
+      if(vegetables[i][metric] > highestValue){
+        highestValue = vegetables[i][metric];
+        highestIndex = i;
+        submitter = vegetables[i]['submitter'];
+      }
+     
+   }
+  
+  return submitter;
+}
