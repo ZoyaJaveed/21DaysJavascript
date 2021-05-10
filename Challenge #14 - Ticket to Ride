@@ -1,0 +1,16 @@
+const dynamicPricing = (numberOfPeople, distanceTraveled) => {
+  // Code here!
+  var total =0, basePrice =1;
+  
+  if(numberOfPeople < 30){
+    total = basePrice + (0.25*distanceTraveled);
+  }else if(numberOfPeople >= 30){
+    total = basePrice + (0.25*distanceTraveled) + 0.25;
+  }
+  
+  var totalPrice = total.toFixed(2);
+  var priceInString = totalPrice.toString();
+  
+  return '$' + priceInString;
+  
+};
