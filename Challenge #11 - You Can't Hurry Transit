@@ -1,0 +1,12 @@
+const busTimes = buses => {
+  // Code here!
+  var longArrive = {};
+  
+  for (const dest in buses) {
+    
+   buses[dest]=(buses[dest].distance/buses[dest].speed); 
+      
+    }
+  return buses;
+}
+
