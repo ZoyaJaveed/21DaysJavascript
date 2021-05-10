@@ -1,0 +1,22 @@
+const checkAir = function (samples, threshold) {
+  // Code here!
+  var total = samples.length;
+  var dirty = 0, clean =0;
+  
+  for(i = 0; i < samples.length; i++){
+    if(samples[i] === 'clean'){
+      ++clean;
+    }else if(samples[i] === 'dirty'){
+      ++dirty;
+    }
+  }
+  var check = (dirty/total);
+  
+  if(check > threshold){
+    return "Polluted";
+  }else{
+    return "Clean";
+  }
+  
+  
+}
